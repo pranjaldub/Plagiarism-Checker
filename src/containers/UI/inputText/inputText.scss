@@ -1,0 +1,129 @@
+.inputAnimate {
+    background-color: #343a40;
+    width: 80%;
+    margin: auto;
+    border-radius: 1em;
+    min-height: 5em;
+    height: auto;
+    padding: 1em;
+    overflow-wrap: break-word;
+
+
+
+    textarea {
+        background: none;
+        border: none;
+        outline: none;
+        height: 100%;
+        width: 100%;
+        color: white;
+        overflow-wrap: break-word;
+
+
+
+
+    }
+
+
+
+}
+
+.submitButton {
+    width: auto;
+    min-width: 200px;
+    min-height: 50px;
+    height: auto;
+    border-radius: 2em;
+    background-color: crimson;
+    color: white;
+    border: none;
+    outline: none;
+    // padding: 0.5em 1em;
+    margin: 1em;
+
+    .loader {
+        position: relative;
+        width: 40px;
+        margin: auto;
+
+        .circle {
+            position: absolute;
+            opacity: 0;
+            transform: rotate(225deg);
+            animation-iteration-count: infinite;
+            animation-name: orbit;
+            animation-duration: 5.5s;
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                margin: 10px;
+                border-radius: 5px;
+                background: #fff;
+                /* Pick a color */
+            }
+
+            &:nth-child(2) {
+                animation-delay: 240ms;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 480ms;
+            }
+
+            &:nth-child(4) {
+                animation-delay: 720ms;
+            }
+
+            &:nth-child(5) {
+                animation-delay: 960ms;
+            }
+        }
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(225deg);
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+
+    7% {
+        transform: rotate(345deg);
+        animation-timing-function: linear;
+    }
+
+    30% {
+        transform: rotate(455deg);
+        animation-timing-function: ease-in-out;
+    }
+
+    39% {
+        transform: rotate(690deg);
+        animation-timing-function: linear;
+    }
+
+    70% {
+        transform: rotate(815deg);
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+
+    75% {
+        transform: rotate(945deg);
+        animation-timing-function: ease-out;
+    }
+
+    76% {
+        transform: rotate(945deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(945deg);
+        opacity: 0;
+    }
+}
